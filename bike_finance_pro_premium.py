@@ -710,6 +710,144 @@ button {
     }
 }
 
+
+/* ============================================================
+   FINAL MOBILE CONTRAST + TOUCH UI FIX
+   ============================================================ */
+.hero,
+.hero h1,
+.hero .hero-sub,
+.hero .badge,
+.hero .badges,
+.hero .brand-line,
+.hero .logo {
+    color: #ffffff !important;
+}
+
+.hero h1 {
+    text-shadow: 0 2px 10px rgba(0,0,0,.35) !important;
+}
+
+.hero .hero-sub {
+    color: #d8e5ef !important;
+}
+
+.hero .badge {
+    color: #f7fbff !important;
+    background: rgba(255,255,255,.12) !important;
+    border-color: rgba(255,255,255,.24) !important;
+}
+
+.stApp button[kind="primary"],
+.stApp button[kind="primary"] p,
+.stApp button[kind="primary"] span {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.stApp button:not([kind="primary"]) {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+}
+
+.stApp [data-testid="stNumberInput"] button {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+    background: #ffffff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.stApp [data-testid="stNumberInput"] input {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+    background: #ffffff !important;
+}
+
+.stApp [data-testid="stTextInput"] input,
+.stApp [data-testid="stSelectbox"] input {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+    background: #ffffff !important;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 390px !important;
+    }
+
+    .hero .brand-line {
+        align-items: flex-start !important;
+    }
+
+    .hero h1 {
+        color: #ffffff !important;
+        font-size: 27px !important;
+        line-height: 1.15 !important;
+    }
+
+    .hero .hero-sub {
+        color: #d8e5ef !important;
+        font-size: 11px !important;
+        line-height: 1.55 !important;
+    }
+
+    .hero .badge {
+        color: #f7fbff !important;
+        font-size: 9px !important;
+    }
+
+    .section-heading h2 {
+        color: #101828 !important;
+    }
+
+    .section-heading p {
+        color: #667085 !important;
+    }
+
+    .card {
+        background: #ffffff !important;
+    }
+
+    .finance-box.lease,
+    .finance-box.loan {
+        background: #ffffff !important;
+    }
+
+    .finance-title,
+    .finance-emi,
+    .finance-row b {
+        color: #101828 !important;
+    }
+
+    .finance-row span,
+    .finance-sub {
+        color: #667085 !important;
+    }
+
+    /* Prevent Streamlit's mobile controls from visually swallowing
+       the number input. */
+    .stNumberInput > div {
+        background: #ffffff !important;
+        border-radius: 13px !important;
+    }
+
+    .stNumberInput input {
+        min-height: 48px !important;
+        font-size: 16px !important;
+    }
+
+    .stNumberInput button {
+        min-width: 42px !important;
+        min-height: 42px !important;
+        font-size: 18px !important;
+    }
+
+    .stButton button {
+        min-height: 46px !important;
+    }
+}
+
 </style>
 """,
     unsafe_allow_html=True,
