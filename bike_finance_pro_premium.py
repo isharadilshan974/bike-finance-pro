@@ -46,6 +46,7 @@ st.set_page_config(
 st.markdown(
     """
 <style>
+:root { color-scheme: light; }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root {
@@ -591,6 +592,124 @@ button {
     .finance-emi { font-size:28px; }
     .total-number { font-size:32px; }
 }
+
+/* ============================================================
+   MOBILE / THEME CONTRAST FIX
+   ============================================================ */
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] {
+    color: #101828 !important;
+}
+
+.stMarkdown,
+.stMarkdown p,
+.stMarkdown span,
+.stMarkdown div,
+[data-testid="stText"],
+[data-testid="stCaptionContainer"] {
+    color: #101828 !important;
+}
+
+.stApp label,
+.stApp [data-testid="stWidgetLabel"],
+.stApp [data-testid="stWidgetLabel"] p,
+.stApp [data-testid="stWidgetLabel"] span {
+    color: #344054 !important;
+}
+
+.stApp input,
+.stApp textarea,
+.stApp select,
+.stApp [data-baseweb="input"] input,
+.stApp [data-baseweb="select"] * {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+    background-color: #ffffff !important;
+}
+
+.stApp input::placeholder,
+.stApp textarea::placeholder {
+    color: #98a2b3 !important;
+    -webkit-text-fill-color: #98a2b3 !important;
+}
+
+.stApp [data-testid="stNumberInput"] button {
+    color: #344054 !important;
+    background: #ffffff !important;
+}
+
+.stApp [data-testid="stExpander"] summary,
+.stApp [data-testid="stExpander"] summary p,
+.stApp [data-testid="stExpander"] summary span {
+    color: #101828 !important;
+}
+
+.stApp [data-testid="stSelectbox"] label,
+.stApp [data-testid="stNumberInput"] label,
+.stApp [data-testid="stTextInput"] label {
+    color: #344054 !important;
+}
+
+.stApp [data-testid="stMetricLabel"],
+.stApp [data-testid="stMetricValue"],
+.stApp [data-testid="stMetricDelta"] {
+    color: #101828 !important;
+}
+
+.stApp [data-testid="stDataFrame"] {
+    color: #101828 !important;
+}
+
+.stApp [data-testid="stDataFrame"] * {
+    color: #101828 !important;
+}
+
+.stApp .stCaption,
+.stApp [data-testid="stCaptionContainer"] p {
+    color: #667085 !important;
+}
+
+/* Keep the premium custom cards white/light while preserving their own
+   dark text and the intentionally dark total/offer/quote cards. */
+.stApp .card,
+.stApp .finance-box,
+.stApp .metric-card,
+.stApp .schedule-card {
+    color: #101828 !important;
+}
+
+@media (max-width: 800px) {
+    .block-container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-top: 12px !important;
+    }
+
+    .hero {
+        border-radius: 24px !important;
+        padding: 22px !important;
+    }
+
+    .card {
+        border-radius: 21px !important;
+        padding: 17px !important;
+    }
+
+    .finance-box {
+        border-radius: 20px !important;
+        padding: 18px !important;
+    }
+
+    .section-heading h2,
+    .section-heading p,
+    .metric-label,
+    .metric-value,
+    .metric-help {
+        color: #101828 !important;
+    }
+}
+
 </style>
 """,
     unsafe_allow_html=True,
