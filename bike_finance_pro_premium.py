@@ -46,6 +46,7 @@ st.set_page_config(
 st.markdown(
     """
 <style>
+:root { color-scheme: light; }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root {
@@ -591,6 +592,715 @@ button {
     .finance-emi { font-size:28px; }
     .total-number { font-size:32px; }
 }
+
+/* ============================================================
+   MOBILE / THEME CONTRAST FIX
+   ============================================================ */
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] {
+    color: #101828 !important;
+}
+
+.stMarkdown,
+.stMarkdown p,
+.stMarkdown span,
+.stMarkdown div,
+[data-testid="stText"],
+[data-testid="stCaptionContainer"] {
+    color: #101828 !important;
+}
+
+.stApp label,
+.stApp [data-testid="stWidgetLabel"],
+.stApp [data-testid="stWidgetLabel"] p,
+.stApp [data-testid="stWidgetLabel"] span {
+    color: #344054 !important;
+}
+
+.stApp input,
+.stApp textarea,
+.stApp select,
+.stApp [data-baseweb="input"] input,
+.stApp [data-baseweb="select"] * {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+    background-color: #ffffff !important;
+}
+
+.stApp input::placeholder,
+.stApp textarea::placeholder {
+    color: #98a2b3 !important;
+    -webkit-text-fill-color: #98a2b3 !important;
+}
+
+.stApp [data-testid="stNumberInput"] button {
+    color: #344054 !important;
+    background: #ffffff !important;
+}
+
+.stApp [data-testid="stExpander"] summary,
+.stApp [data-testid="stExpander"] summary p,
+.stApp [data-testid="stExpander"] summary span {
+    color: #101828 !important;
+}
+
+.stApp [data-testid="stSelectbox"] label,
+.stApp [data-testid="stNumberInput"] label,
+.stApp [data-testid="stTextInput"] label {
+    color: #344054 !important;
+}
+
+.stApp [data-testid="stMetricLabel"],
+.stApp [data-testid="stMetricValue"],
+.stApp [data-testid="stMetricDelta"] {
+    color: #101828 !important;
+}
+
+.stApp [data-testid="stDataFrame"] {
+    color: #101828 !important;
+}
+
+.stApp [data-testid="stDataFrame"] * {
+    color: #101828 !important;
+}
+
+.stApp .stCaption,
+.stApp [data-testid="stCaptionContainer"] p {
+    color: #667085 !important;
+}
+
+/* Keep the premium custom cards white/light while preserving their own
+   dark text and the intentionally dark total/offer/quote cards. */
+.stApp .card,
+.stApp .finance-box,
+.stApp .metric-card,
+.stApp .schedule-card {
+    color: #101828 !important;
+}
+
+@media (max-width: 800px) {
+    .block-container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-top: 12px !important;
+    }
+
+    .hero {
+        border-radius: 24px !important;
+        padding: 22px !important;
+    }
+
+    .card {
+        border-radius: 21px !important;
+        padding: 17px !important;
+    }
+
+    .finance-box {
+        border-radius: 20px !important;
+        padding: 18px !important;
+    }
+
+    .section-heading h2,
+    .section-heading p,
+    .metric-label,
+    .metric-value,
+    .metric-help {
+        color: #101828 !important;
+    }
+}
+
+
+/* ============================================================
+   FINAL MOBILE CONTRAST + TOUCH UI FIX
+   ============================================================ */
+.hero,
+.hero h1,
+.hero .hero-sub,
+.hero .badge,
+.hero .badges,
+.hero .brand-line,
+.hero .logo {
+    color: #ffffff !important;
+}
+
+.hero h1 {
+    text-shadow: 0 2px 10px rgba(0,0,0,.35) !important;
+}
+
+.hero .hero-sub {
+    color: #d8e5ef !important;
+}
+
+.hero .badge {
+    color: #f7fbff !important;
+    background: rgba(255,255,255,.12) !important;
+    border-color: rgba(255,255,255,.24) !important;
+}
+
+.stApp button[kind="primary"],
+.stApp button[kind="primary"] p,
+.stApp button[kind="primary"] span {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.stApp button:not([kind="primary"]) {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+}
+
+.stApp [data-testid="stNumberInput"] button {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+    background: #ffffff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.stApp [data-testid="stNumberInput"] input {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+    background: #ffffff !important;
+}
+
+.stApp [data-testid="stTextInput"] input,
+.stApp [data-testid="stSelectbox"] input {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+    background: #ffffff !important;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 390px !important;
+    }
+
+    .hero .brand-line {
+        align-items: flex-start !important;
+    }
+
+    .hero h1 {
+        color: #ffffff !important;
+        font-size: 27px !important;
+        line-height: 1.15 !important;
+    }
+
+    .hero .hero-sub {
+        color: #d8e5ef !important;
+        font-size: 11px !important;
+        line-height: 1.55 !important;
+    }
+
+    .hero .badge {
+        color: #f7fbff !important;
+        font-size: 9px !important;
+    }
+
+    .section-heading h2 {
+        color: #101828 !important;
+    }
+
+    .section-heading p {
+        color: #667085 !important;
+    }
+
+    .card {
+        background: #ffffff !important;
+    }
+
+    .finance-box.lease,
+    .finance-box.loan {
+        background: #ffffff !important;
+    }
+
+    .finance-title,
+    .finance-emi,
+    .finance-row b {
+        color: #101828 !important;
+    }
+
+    .finance-row span,
+    .finance-sub {
+        color: #667085 !important;
+    }
+
+    /* Prevent Streamlit's mobile controls from visually swallowing
+       the number input. */
+    .stNumberInput > div {
+        background: #ffffff !important;
+        border-radius: 13px !important;
+    }
+
+    .stNumberInput input {
+        min-height: 48px !important;
+        font-size: 16px !important;
+    }
+
+    .stNumberInput button {
+        min-width: 42px !important;
+        min-height: 42px !important;
+        font-size: 18px !important;
+    }
+
+    .stButton button {
+        min-height: 46px !important;
+    }
+}
+
+
+/* ============================================================
+   SUPER MOBILE UI — FINAL OVERRIDE
+   ============================================================ */
+
+/* Force the whole Streamlit canvas into a light, high-contrast mode. */
+html, body, .stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stHeader"],
+[data-testid="stMain"],
+[data-testid="stSidebar"] {
+    color-scheme: light !important;
+}
+
+.stApp {
+    background: #f4f7fa !important;
+}
+
+/* Native Streamlit text: dark by default. */
+.stApp * {
+    text-shadow: none;
+}
+
+.stApp p,
+.stApp span,
+.stApp label,
+.stApp small,
+.stApp div,
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp h4,
+.stApp h5,
+.stApp h6 {
+    color: #101828;
+}
+
+/* Our dark premium hero is the exception. */
+.stApp .hero,
+.stApp .hero * {
+    color: #ffffff !important;
+}
+
+.stApp .hero .hero-sub {
+    color: #d9e5ef !important;
+}
+
+.stApp .hero .badge {
+    color: #f8fbff !important;
+}
+
+/* Dark customer quotation / offer / total cards are also exceptions. */
+.stApp .total-card,
+.stApp .total-card *,
+.stApp .offer-card,
+.stApp .offer-card *,
+.stApp .quote,
+.stApp .quote * {
+    color: #ffffff !important;
+}
+
+.stApp .total-card .total-label,
+.stApp .total-card .total-detail,
+.stApp .offer-card .offer-sub,
+.stApp .offer-card small,
+.stApp .quote-sub,
+.stApp .quote-total small {
+    color: #c9d6e1 !important;
+}
+
+/* All labels are readable. */
+.stApp [data-testid="stWidgetLabel"],
+.stApp [data-testid="stWidgetLabel"] *,
+.stApp label {
+    color: #344054 !important;
+    -webkit-text-fill-color: #344054 !important;
+    opacity: 1 !important;
+}
+
+/* Inputs: force a white surface and dark text. */
+.stApp input,
+.stApp textarea,
+.stApp select,
+.stApp [data-baseweb="input"],
+.stApp [data-baseweb="select"],
+.stApp [data-baseweb="select"] > div,
+.stApp [data-testid="stNumberInput"] > div,
+.stApp [data-testid="stTextInput"] > div {
+    background: #ffffff !important;
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+    border-color: #d0d5dd !important;
+    opacity: 1 !important;
+}
+
+.stApp input::placeholder,
+.stApp textarea::placeholder {
+    color: #98a2b3 !important;
+    -webkit-text-fill-color: #98a2b3 !important;
+    opacity: 1 !important;
+}
+
+/* Number input +/- controls. */
+.stApp [data-testid="stNumberInput"] button {
+    background: #ffffff !important;
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+    border: 0 !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+}
+
+.stApp [data-testid="stNumberInput"] button svg {
+    color: #101828 !important;
+    fill: #101828 !important;
+}
+
+/* Selectbox text and arrow. */
+.stApp [data-testid="stSelectbox"] *,
+.stApp [data-baseweb="select"] *,
+.stApp [role="option"] {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+}
+
+.stApp [data-baseweb="select"] svg {
+    fill: #344054 !important;
+}
+
+/* Buttons: primary dark button gets white text; light buttons get dark text. */
+.stApp button[kind="primary"],
+.stApp button[kind="primary"] * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.stApp button:not([kind="primary"]),
+.stApp button:not([kind="primary"]) * {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+}
+
+/* Streamlit expander. */
+.stApp [data-testid="stExpander"] {
+    background: rgba(255,255,255,.96) !important;
+    border: 1px solid #dfe5eb !important;
+    border-radius: 18px !important;
+}
+
+.stApp [data-testid="stExpander"] summary,
+.stApp [data-testid="stExpander"] summary *,
+.stApp [data-testid="stExpander"] p {
+    color: #101828 !important;
+    -webkit-text-fill-color: #101828 !important;
+}
+
+/* Metrics and tables. */
+.stApp [data-testid="stMetric"],
+.stApp [data-testid="stMetric"] *,
+.stApp [data-testid="stDataFrame"],
+.stApp [data-testid="stDataFrame"] * {
+    color: #101828 !important;
+}
+
+/* ============================================================
+   MOBILE LAYOUT
+   ============================================================ */
+@media (max-width: 700px) {
+
+    .block-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 8px 10px 28px !important;
+    }
+
+    /* Compact hero, no text collision. */
+    .hero {
+        padding: 20px 16px !important;
+        border-radius: 22px !important;
+        margin-bottom: 12px !important;
+        min-height: auto !important;
+    }
+
+    .brand-line {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+
+    .logo {
+        width: 54px !important;
+        height: 54px !important;
+        min-width: 54px !important;
+        border-radius: 17px !important;
+        font-size: 27px !important;
+    }
+
+    .hero h1 {
+        font-size: 24px !important;
+        line-height: 1.15 !important;
+        margin: 2px 0 0 !important;
+    }
+
+    .hero-sub {
+        font-size: 10.5px !important;
+        line-height: 1.45 !important;
+        margin-top: 6px !important;
+    }
+
+    .badges {
+        gap: 6px !important;
+        margin-top: 15px !important;
+    }
+
+    .badge {
+        padding: 7px 9px !important;
+        font-size: 8px !important;
+        letter-spacing: .15px !important;
+    }
+
+    /* Every Streamlit column becomes full width on small screens. */
+    [data-testid="stHorizontalBlock"] {
+        flex-wrap: wrap !important;
+        gap: 0 !important;
+    }
+
+    [data-testid="stHorizontalBlock"] > [data-testid="column"] {
+        width: 100% !important;
+        min-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    /* Give sections comfortable spacing. */
+    .card {
+        padding: 16px !important;
+        margin-bottom: 12px !important;
+        border-radius: 20px !important;
+    }
+
+    .section-heading {
+        display: block !important;
+        margin-bottom: 12px !important;
+    }
+
+    .section-heading h2 {
+        font-size: 17px !important;
+        line-height: 1.25 !important;
+    }
+
+    .section-heading p {
+        font-size: 10px !important;
+        line-height: 1.45 !important;
+    }
+
+    .customer-chip {
+        display: inline-flex !important;
+        margin-top: 9px !important;
+    }
+
+    /* Inputs are deliberately large for touch. */
+    .stNumberInput,
+    .stTextInput,
+    .stSelectbox {
+        margin-bottom: 8px !important;
+    }
+
+    .stNumberInput input,
+    .stTextInput input,
+    .stSelectbox input {
+        min-height: 50px !important;
+        height: 50px !important;
+        font-size: 16px !important;
+        border-radius: 13px !important;
+    }
+
+    .stNumberInput [data-baseweb="input"],
+    .stTextInput [data-baseweb="input"],
+    .stSelectbox [data-baseweb="select"] {
+        min-height: 50px !important;
+        border-radius: 13px !important;
+    }
+
+    .stNumberInput button {
+        min-width: 48px !important;
+        min-height: 48px !important;
+    }
+
+    /* Buttons stack vertically — prevents overlap on narrow phones. */
+    .stButton,
+    .stDownloadButton {
+        width: 100% !important;
+        margin: 4px 0 !important;
+    }
+
+    .stButton button,
+    .stDownloadButton button {
+        width: 100% !important;
+        min-height: 48px !important;
+        font-size: 13px !important;
+        border-radius: 13px !important;
+    }
+
+    /* Finance cards stack and stay readable. */
+    .finance-box {
+        min-height: auto !important;
+        padding: 18px !important;
+        margin-bottom: 12px !important;
+        border-radius: 20px !important;
+    }
+
+    .finance-title {
+        font-size: 19px !important;
+        color: #101828 !important;
+    }
+
+    .finance-emi {
+        font-size: 28px !important;
+        color: #101828 !important;
+    }
+
+    .finance-row {
+        font-size: 11px !important;
+        padding: 10px 0 !important;
+    }
+
+    .finance-row span {
+        color: #667085 !important;
+    }
+
+    .finance-row b {
+        color: #101828 !important;
+    }
+
+    /* Total card stays dark but never clips horizontally. */
+    .total-card {
+        padding: 23px 16px !important;
+        border-radius: 21px !important;
+        overflow: hidden !important;
+    }
+
+    .total-number {
+        font-size: 30px !important;
+        line-height: 1.15 !important;
+        word-break: break-word !important;
+    }
+
+    /* Offer pills become two columns instead of one long row. */
+    .offer-card {
+        padding: 19px 16px !important;
+        border-radius: 21px !important;
+    }
+
+    .offer-title {
+        font-size: 21px !important;
+        line-height: 1.2 !important;
+    }
+
+    .offer-pill-row {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
+
+    .offer-pill {
+        min-width: 0 !important;
+        padding: 10px !important;
+    }
+
+    .offer-pill b {
+        font-size: 13px !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    /* Tabs scroll horizontally rather than breaking the page. */
+    .stTabs [data-baseweb="tab-list"] {
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+        gap: 4px !important;
+        scrollbar-width: none !important;
+    }
+
+    .stTabs [data-baseweb="tab-list"]::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .stTabs [data-baseweb="tab"] {
+        white-space: nowrap !important;
+        font-size: 10px !important;
+        padding: 9px 11px !important;
+    }
+
+    /* Dataframe: allow horizontal scrolling only inside the table. */
+    [data-testid="stDataFrame"] {
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        border-radius: 14px !important;
+    }
+
+    .note {
+        font-size: 9px !important;
+        line-height: 1.65 !important;
+    }
+
+    .warning,
+    .success-box {
+        font-size: 10px !important;
+        line-height: 1.55 !important;
+        border-radius: 13px !important;
+    }
+
+    .quote {
+        padding: 19px 15px !important;
+        border-radius: 21px !important;
+    }
+
+    .quote-head {
+        display: block !important;
+    }
+
+    .quote-title {
+        font-size: 20px !important;
+    }
+
+    .quote-id {
+        display: inline-flex !important;
+        margin-top: 8px !important;
+    }
+
+    .quote-line {
+        font-size: 10.5px !important;
+    }
+
+    .quote-total b {
+        font-size: 24px !important;
+        word-break: break-word !important;
+    }
+
+    /* Prevent Streamlit's bottom toolbar / floating controls from
+       covering form elements on small phones. */
+    [data-testid="stToolbar"] {
+        display: none !important;
+    }
+
+    /* Keep the app itself clear of browser-width overflow. */
+    body,
+    .stApp,
+    [data-testid="stAppViewContainer"],
+    [data-testid="stMain"] {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
 </style>
 """,
     unsafe_allow_html=True,
